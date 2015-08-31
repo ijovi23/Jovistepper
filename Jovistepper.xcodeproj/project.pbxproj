@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98A34B8D1B94267100AD2CCD /* libJovistepper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A34B811B94267000AD2CCD /* libJovistepper.a */; };
+		98A34B9E1B9426D100AD2CCD /* Jovistepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A34B9C1B9426D100AD2CCD /* Jovistepper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98A34B8E1B94267100AD2CCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98A34B791B94267000AD2CCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98A34B801B94267000AD2CCD;
+			remoteInfo = Jovistepper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		98A34B7F1B94267000AD2CCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		98A34B811B94267000AD2CCD /* libJovistepper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJovistepper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A34B8C1B94267100AD2CCD /* JovistepperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JovistepperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A34B921B94267100AD2CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98A34B9B1B9426D100AD2CCD /* Jovistepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jovistepper.h; sourceTree = "<group>"; };
+		98A34B9C1B9426D100AD2CCD /* Jovistepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jovistepper.m; sourceTree = "<group>"; };
+		98A34B9D1B9426D100AD2CCD /* Jovistepper.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Jovistepper.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98A34B7E1B94267000AD2CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98A34B891B94267100AD2CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98A34B8D1B94267100AD2CCD /* libJovistepper.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98A34B781B94267000AD2CCD = {
+			isa = PBXGroup;
+			children = (
+				98A34B831B94267000AD2CCD /* Jovistepper */,
+				98A34B901B94267100AD2CCD /* JovistepperTests */,
+				98A34B821B94267000AD2CCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98A34B821B94267000AD2CCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98A34B811B94267000AD2CCD /* libJovistepper.a */,
+				98A34B8C1B94267100AD2CCD /* JovistepperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98A34B831B94267000AD2CCD /* Jovistepper */ = {
+			isa = PBXGroup;
+			children = (
+				98A34B9B1B9426D100AD2CCD /* Jovistepper.h */,
+				98A34B9C1B9426D100AD2CCD /* Jovistepper.m */,
+				98A34B9D1B9426D100AD2CCD /* Jovistepper.xib */,
+			);
+			path = Jovistepper;
+			sourceTree = "<group>";
+		};
+		98A34B901B94267100AD2CCD /* JovistepperTests */ = {
+			isa = PBXGroup;
+			children = (
+				98A34B911B94267100AD2CCD /* Supporting Files */,
+			);
+			path = JovistepperTests;
+			sourceTree = "<group>";
+		};
+		98A34B911B94267100AD2CCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				98A34B921B94267100AD2CCD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98A34B801B94267000AD2CCD /* Jovistepper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98A34B951B94267100AD2CCD /* Build configuration list for PBXNativeTarget "Jovistepper" */;
+			buildPhases = (
+				98A34B7D1B94267000AD2CCD /* Sources */,
+				98A34B7E1B94267000AD2CCD /* Frameworks */,
+				98A34B7F1B94267000AD2CCD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jovistepper;
+			productName = Jovistepper;
+			productReference = 98A34B811B94267000AD2CCD /* libJovistepper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		98A34B8B1B94267100AD2CCD /* JovistepperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98A34B981B94267100AD2CCD /* Build configuration list for PBXNativeTarget "JovistepperTests" */;
+			buildPhases = (
+				98A34B881B94267100AD2CCD /* Sources */,
+				98A34B891B94267100AD2CCD /* Frameworks */,
+				98A34B8A1B94267100AD2CCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98A34B8F1B94267100AD2CCD /* PBXTargetDependency */,
+			);
+			name = JovistepperTests;
+			productName = JovistepperTests;
+			productReference = 98A34B8C1B94267100AD2CCD /* JovistepperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98A34B791B94267000AD2CCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Jovi;
+				TargetAttributes = {
+					98A34B801B94267000AD2CCD = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					98A34B8B1B94267100AD2CCD = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 98A34B7C1B94267000AD2CCD /* Build configuration list for PBXProject "Jovistepper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 98A34B781B94267000AD2CCD;
+			productRefGroup = 98A34B821B94267000AD2CCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98A34B801B94267000AD2CCD /* Jovistepper */,
+				98A34B8B1B94267100AD2CCD /* JovistepperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98A34B8A1B94267100AD2CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98A34B7D1B94267000AD2CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98A34B9E1B9426D100AD2CCD /* Jovistepper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98A34B881B94267100AD2CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98A34B8F1B94267100AD2CCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98A34B801B94267000AD2CCD /* Jovistepper */;
+			targetProxy = 98A34B8E1B94267100AD2CCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		98A34B931B94267100AD2CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		98A34B941B94267100AD2CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98A34B961B94267100AD2CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		98A34B971B94267100AD2CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		98A34B991B94267100AD2CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JovistepperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		98A34B9A1B94267100AD2CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JovistepperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98A34B7C1B94267000AD2CCD /* Build configuration list for PBXProject "Jovistepper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98A34B931B94267100AD2CCD /* Debug */,
+				98A34B941B94267100AD2CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98A34B951B94267100AD2CCD /* Build configuration list for PBXNativeTarget "Jovistepper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98A34B961B94267100AD2CCD /* Debug */,
+				98A34B971B94267100AD2CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		98A34B981B94267100AD2CCD /* Build configuration list for PBXNativeTarget "JovistepperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98A34B991B94267100AD2CCD /* Debug */,
+				98A34B9A1B94267100AD2CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98A34B791B94267000AD2CCD /* Project object */;
+}
