@@ -47,22 +47,19 @@
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self.view.layer setCornerRadius:3];
-    [self.view.layer setBorderWidth:1.0];
-    [self.view.layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self.layer setCornerRadius:0];
+    [self.layer setBorderWidth:0.5];
+    [self.layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
     [_textValue setDelegate:self];
+    _maxValue = StepperDefaultMaxValue;
+    _minValue = StepperDefaultMinValue;
     [self updateValueToTextField];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)setTouchEnabled:(BOOL)isEnabled{
-    [self.view setUserInteractionEnabled:isEnabled];
+    [self setUserInteractionEnabled:isEnabled];
 }
 
 - (void)setValue:(NSInteger)value{
@@ -80,10 +77,12 @@
     if (_value != _oldValue) {
         [_textValue setText:[NSString stringWithFormat:@"%ld", _value]];
         if (_delegate != nil) {
-            [_delegate stepper:self valueChanged:_value];
-            if (_value > _oldValue) {
+            if ([_delegate respondsToSelector:@selector(stepper:valueChanged:)]) {
+                [_delegate stepper:self valueChanged:_value];
+            }
+            if (_value > _oldValue && [_delegate respondsToSelector:@selector(stepper:valueIncreased:)]) {
                 [_delegate stepper:self valueIncreased:_value];
-            }else if (_value < _oldValue){
+            }else if (_value < _oldValue && [_delegate respondsToSelector:@selector(stepper:valueDecreased:)]){
                 [_delegate stepper:self valueDecreased:_value];
             }
         }
@@ -103,7 +102,7 @@
 }
 
 - (IBAction)btnPlusPressed:(id)sender {
-    if (_delegate) {
+    if (_delegate && [_delegate respondsToSelector:@selector(stepperButtonPlusPressed:)]) {
         [_delegate stepperButtonPlusPressed:self];
     }
     _value ++;
@@ -112,10 +111,13 @@
         return;
     }
     [self updateValueToTextField];
+    if ([_textValue isFirstResponder]) {
+        [_textValue resignFirstResponder];
+    }
 }
 
 - (IBAction)btnMinusPressed:(id)sender {
-    if (_delegate) {
+    if (_delegate && [_delegate respondsToSelector:@selector(stepperButtonMinusPressed:)]) {
         [_delegate stepperButtonMinusPressed:self];
     }
     _value --;
@@ -124,14 +126,26 @@
         return;
     }
     [self updateValueToTextField];
+    if ([_textValue isFirstResponder]) {
+        [_textValue resignFirstResponder];
+    }
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    if (_delegate && [_delegate respondsToSelector:@selector(stepper:fieldDidBeginEditing:)]) {
+        [_delegate stepper:self fieldDidBeginEditing:textField];
+    }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     [self updateValueFromTextField];
+    if (_delegate && [_delegate respondsToSelector:@selector(stepper:fieldDidEndEditing:)]) {
+        [_delegate stepper:self fieldDidEndEditing:textField];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [self updateValueFromTextField];
+//    [self updateValueFromTextField];
     [textField resignFirstResponder];
     return YES;
 }
