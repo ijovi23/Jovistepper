@@ -74,8 +74,8 @@
 }
 
 - (void)updateValueToTextField{
+    [_textValue setText:[NSString stringWithFormat:@"%ld", _value]];
     if (_value != _oldValue) {
-        [_textValue setText:[NSString stringWithFormat:@"%ld", _value]];
         if (_delegate != nil) {
             if ([_delegate respondsToSelector:@selector(stepper:valueChanged:)]) {
                 [_delegate stepper:self valueChanged:_value];
