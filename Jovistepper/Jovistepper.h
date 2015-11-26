@@ -10,49 +10,48 @@
 #define StepperDefaultMaxValue 9999
 #define StepperDefaultMinValue 0
 
-@class Jovistepper;
-
-@protocol JovistepperDelegate <NSObject>
-@optional
-- (void)stepper:(Jovistepper*)stepper valueChanged:(NSInteger)value;
-- (void)stepper:(Jovistepper *)stepper valueIncreased:(NSInteger)value;
-- (void)stepper:(Jovistepper *)stepper valueDecreased:(NSInteger)value;
-- (void)stepper:(Jovistepper *)stepper fieldDidBeginEditing:(UITextField*)textField;
-- (void)stepper:(Jovistepper *)stepper fieldDidEndEditing:(UITextField*)textField;
-- (void)stepperButtonPlusPressed:(Jovistepper *)stepper;
-- (void)stepperButtonMinusPressed:(Jovistepper *)stepper;
-@end
-
-
-@interface Jovistepper : UIView
-@property (weak, nonatomic) IBOutlet UIButton *btnPlus;
-@property (weak, nonatomic) IBOutlet UIButton *btnMinus;
-@property (weak, nonatomic) IBOutlet UITextField *textValue;
+@interface Jovistepper : UIControl
+@property (weak, nonatomic) UIButton *btnPlus;
+@property (weak, nonatomic) UIButton *btnMinus;
+@property (weak, nonatomic) UIButton *btnValue;
 
 /**
- *  当前显示的值
+ *  Current Value
  */
 @property (assign, nonatomic) NSInteger value;
 
 /**
- *  最大值
+ *  Maximum Value
  */
 @property (assign, nonatomic) NSInteger maxValue;
 
 /**
- *  最小值
+ *  Minimum Value
  */
 @property (assign, nonatomic) NSInteger minValue;
 
-/**
- *  代理
- */
-@property (weak, nonatomic) id<JovistepperDelegate> delegate;
+@property (strong, nonatomic) UIColor *backgroundColorForButtonPlusAndMinus;
 
-//- (instancetype)init;
-//- (instancetype)initWithValue:(NSInteger)value minValue:(NSInteger)min maxValue:(NSInteger)max;
-// Please Init With: [[[NSBundle mainBundle]loadNibNamed:@"Jovistepper" owner:self options:nil]firstObject]
+@property (strong, nonatomic) UIColor *backgroundColorForButtonValue;
+
+@property (strong, nonatomic) UIFont *fontForButtonPlusAndMinus;
+
+@property (strong, nonatomic) UIFont *fontForButtonValue;
+
+@property (strong, nonatomic) UIColor *titleColorForButtonPlusAndMinus;
+
+@property (strong, nonatomic) UIColor *titleColorForButtonValue;
+
+@property (strong, nonatomic) NSString *inputViewTitle;
+@property (strong, nonatomic) NSString *inputViewCancelTitle;
+@property (strong, nonatomic) NSString *inputViewConfirmTitle;
+
+/**
+ *  Delegate
+ */
+//@property (weak, nonatomic) id<JovistepperDelegate> delegate;
+
+- (instancetype)initWithValue:(NSInteger)value minValue:(NSInteger)min maxValue:(NSInteger)max;
 - (void)setValue:(NSInteger)value;
-- (void)setTouchEnabled:(BOOL)isEnabled;
 
 @end
