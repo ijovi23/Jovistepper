@@ -33,6 +33,10 @@
     [stepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:stepper];
     
+    [stepper setOutOfRangeBlock:^(NSInteger ex_value, BOOL isGreater) {
+        NSLog(@"Out Of Range! value:%ld greater:%@", ex_value, isGreater?@"Greater":@"Less");
+    }];
+    
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(100, 200, 100, 30)];
     [label setTextColor:[UIColor blackColor]];
     [label setText:[NSString stringWithFormat:@"Stepper:%ld", stepper.value]];

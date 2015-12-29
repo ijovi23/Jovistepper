@@ -105,14 +105,34 @@
 }
 
 - (void)setValue:(NSInteger)value{
-    if (value < _minValue){
-        value = _minValue;
-    }else if (value > _maxValue){
-        value = _maxValue;
-    }
-    _value = value;
+    _value = [self _getFixedValue:value];
     
     [self updateValueToTextField];
+}
+
+- (NSInteger)_getFixedValue:(NSInteger)value {
+    NSInteger fixedValue;
+    
+    if (value < _minValue){
+        //less
+        if (_outOfRangeBlock) {
+            _outOfRangeBlock(value, NO);
+        }
+        fixedValue = _minValue;
+        
+    }else if (value > _maxValue){
+        //greater
+        if (_outOfRangeBlock) {
+            _outOfRangeBlock(value, YES);
+        }
+        fixedValue = _maxValue;
+        
+    }else{
+        //in the range
+        fixedValue = value;
+    }
+    
+    return fixedValue;
 }
 
 - (void)updateValueToTextField{
@@ -124,20 +144,12 @@
 }
 
 - (void)btnPlusPressed:(UIButton*)sender {
-    _value ++;
-    if (_value > _maxValue){
-        _value = _maxValue;
-        return;
-    }
+    _value = [self _getFixedValue:(_value + 1)];
     [self updateValueToTextField];
 }
 
 - (void)btnMinusPressed:(UIButton*)sender {
-    _value --;
-    if (_value < _minValue){
-        _value = _minValue;
-        return;
-    }
+    _value = [self _getFixedValue:(_value - 1)];
     [self updateValueToTextField];
 }
 

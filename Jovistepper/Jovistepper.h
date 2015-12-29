@@ -11,9 +11,9 @@
 #define StepperDefaultMinValue 0
 
 @interface Jovistepper : UIControl
-@property (weak, nonatomic) UIButton *btnPlus;
-@property (weak, nonatomic) UIButton *btnMinus;
-@property (weak, nonatomic) UIButton *btnValue;
+@property (weak, nonatomic, readonly) UIButton *btnPlus;
+@property (weak, nonatomic, readonly) UIButton *btnMinus;
+@property (weak, nonatomic, readonly) UIButton *btnValue;
 
 /**
  *  Current Value
@@ -47,11 +47,15 @@
 @property (strong, nonatomic) NSString *inputViewConfirmTitle;
 
 /**
- *  Delegate
+ *  When you set a value which is out of stepper's range, this block will be called;
  */
-//@property (weak, nonatomic) id<JovistepperDelegate> delegate;
+@property (copy, nonatomic) void (^outOfRangeBlock)(NSInteger ex_value, BOOL isGreater);
+
+/**
+ *  If you add steppers in UITableViewCells, this property'd be useful :)
+ */
+@property (strong, nonatomic) NSIndexPath *indexPath;
 
 - (instancetype)initWithValue:(NSInteger)value minValue:(NSInteger)min maxValue:(NSInteger)max;
-- (void)setValue:(NSInteger)value;
 
 @end
